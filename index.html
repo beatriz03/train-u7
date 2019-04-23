@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Train Schedule Timechart</title>
+
+    <!--Firebase link-->
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <!--JQuery link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--CSS link-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">Train Station Timechart</h1>
+            <p class="text-center">You'd be "loco" to miss your locomotive train!</p>
+        </div>
+
+        <!--Form for user input-->
+        <div class="row">
+            <div class="col-lg-9">
+
+
+                <!--table for new data to be displayed-->
+                <h3 class="panel-title">Current Train Schedule</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th>Frequency (min)</th>
+                            <th>Next Arrival</th>
+                            <th>Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="trainNameDisplay"></td>
+                            <td id="destinationDisplay"></td>
+                            <td id="frequencyDisplay"></td>
+                            <td id="nextArrivalDisplay"></td>
+                            <td id="minutesAwayDisplay"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <br>
+                        <h3 class="panel-title">Add train</h3>
+                    </div>
+                    <!--<divclass="panel heading">end of add train section-->
+                    <div class="panel-body">
+
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="text">Train Name: </label>
+                                <input type="text" class="form-control" id="trainNameInput">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="destination">Destination: </label>
+                                <input type="text" class="form-control" id="destinationInput">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="text">First Train Time (HH:mm - military time): </label>
+                                <input type="text" class="form-control" id="firstTrainInput">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="text">Frequency (min): </label>
+                                <input type="text" class="form-control" id="frequencyInput">
+                            </div>
+                            <button type="submit" class="btn btn-default" id="addTrain">Submit</button>
+                        </form>
+
+                    </div> <!-- <div class="panel-body"> -->
+                </div> <!-- <div class="panel panel default"> -->
+            </div> <!-- <div class="col-lg-6"> -->
+        </div> <!-- <div class="row"> -->
+    </div> <!-- very 1st div above jumbotron <div class="container"> -->
+
+
+    <!--Javascript link-->
+    <script src="app.js"></script>
+</body>
+
+</html>
