@@ -45,20 +45,23 @@ $("#addTrain").on("click", function () {
     // Time apart (remainder)
     var tRemainder = diffTime % frequency;
     console.log(tRemainder);
-    // Minute Until Train
+    // Minutes Until Train
     var minutesAway = frequency - tRemainder;
     console.log("MINUTES TILL TRAIN: " + minutesAway);
     // Next Train
     var nextArrival = moment().add(minutesAway, "minutes");
-    console.log("ARRIVAL TIME: " + moment(nextArrival).format("HH:mm"));
+    console.log(moment(nextArrival).format("HH:mm"));
+    var nextArrival = moment(nextArrival).format("HH:mm");
 
 
 
 
+//creates new row  
     var markup = "<tr><td>" + trainName + "</td> <td>" + destination + "</td><td>" + frequency + "</td> <td>" + nextArrival + "</td> <td>" + minutesAway + "</td></tr>";
 
     $("table tbody").append(markup);
 });
+
 
 
 //This will update info on Firebase side

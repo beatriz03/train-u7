@@ -1,22 +1,40 @@
-/* .jumbotron {
-    background-color: green;
+body {
+  background: url(images/train2.jpg);
+}
+
+.jumbotron {
+  width: 70%;
+  background-color: rgb(70, 69, 71);
+  color: white;
+  margin:auto;
+  text-align: center;
+}
+
+
+.panel {
+background-color: white;
+color: black;
+padding: 10px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    }
+      
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    }
+      
+tr:nth-child(even) {
+    background-color: #dddddd;
+    }
+
+h3 {
+    background-color: rgb(70, 69, 71);
     color: white;
-    text-align: center;
-    } */
-
-
-    table {
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
-        width: 100%;
-      }
-      
-      td, th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-      }
-      
-      tr:nth-child(even) {
-        background-color: #dddddd;
-      }
+    padding: 3px;
+  }
